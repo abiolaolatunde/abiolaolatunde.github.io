@@ -168,3 +168,14 @@ h1,h2,h3{overflow-wrap:break-word}
  .statement{font-size:clamp(24px,6.4vw,52px)}
  .lead{font-size:clamp(22px,6vw,52px)}
 }
+
+/* Playfair wordmarks + light-mode logo mark */
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:700;font-display:swap;src:url(fonts/playfair-display-latin-700-italic.woff2) format("woff2")}
+:root{--serif:"Playfair Display",Georgia,"Times New Roman",serif}
+.wordmark,.foot-mark{font-family:var(--serif);font-weight:700;font-style:italic;letter-spacing:-.03em}
+.wordmark{font-size:clamp(90px,34.8vw,532px);line-height:.85;padding-right:.08em}
+.foot-mark{font-size:clamp(90px,34.8vw,532px);letter-spacing:-.03em;padding-left:0;line-height:.85}
+.foot-mark{line-height:.9;padding-right:.06em}
+.logo-mark{fill:#E8EE58;transition:fill .4s ease-out}
+html[data-theme="light"] .logo-mark{fill:#0A0A0A}
+@media (max-width:760px){.wordmark{font-size:33.5vw}.foot-mark{font-size:33.5vw}}
